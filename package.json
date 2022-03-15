@@ -1,0 +1,49 @@
+{
+  "name": "user-language-middleware",
+  "version": "1.0.0",
+  "description": "Express middleware to collect and normalize user lang from http headers",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "jest  --verbose ./**/*.test.js",
+    "test:coverage": "jest --verbose ./**/*.test.js --coverage",
+    "test:watch": "jest --verbose ./**/*.test.js --watchAll",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "ignore": [
+      "/docs/**/*.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UlisesGascon/user-language-middleware.git"
+  },
+  "keywords": [
+    "express",
+    "middleware"
+  ],
+  "author": "Ulises Gascon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UlisesGascon/user-language-middleware/issues"
+  },
+  "homepage": "https://github.com/UlisesGascon/user-language-middleware#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test"
+    }
+  },
+  "devDependencies": {
+    "husky": "4.3.8",
+    "jest": "27.5.1",
+    "standard": "16.0.4"
+  },
+  "dependencies": {
+    "debug": "4.3.3"
+  }
+}
